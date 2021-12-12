@@ -27,16 +27,14 @@ services:
     ports:
       - "9000:9000"
     depends_on:
-      - mysql
-
-
+      - db
 
   db:
     image: mysql:8.0
     ports:
       - "3306:3306"
     volumes:
-      - "./var/lib/mysql"
+      - "./storage/mysql:/var/lib/mysql"
     environment:
       MYSQL_DATABASE: portfolio-mysql
       MYSQL_USER: root

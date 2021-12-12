@@ -15,7 +15,6 @@ RUN apk --update --no-cache add \
   icu-dev \
   oniguruma-dev \
   nodejs \
-  nodejs-npm \
   patch && \
   rm -rf /var/cache/apk/* && \
   git clone https://github.com/phpredis/phpredis.git /usr/src/php/ext/redis && \
