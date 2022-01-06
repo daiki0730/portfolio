@@ -7,7 +7,7 @@ volumes:
 
 
 services:
-  web:
+  nginx:
     build: "./.docker/nginx"
     container_name: portfolio-nginx
     ports:
@@ -28,9 +28,9 @@ services:
     ports:
       - "9000:9000"
     depends_on:
-      - db
+      - mysql
 
-  db:
+  mysql:
     image: mysql:8.0
     ports:
       - "3306:3306"
